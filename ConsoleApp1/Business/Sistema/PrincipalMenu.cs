@@ -18,7 +18,8 @@ namespace ConsoleApp1.Business.Sistema
             Usuarios = 1,
             Filmes = 2,
             Series = 3,
-            Relatorios = 4
+            Relatorios = 4,
+            Assistidos = 5
         }
 
 
@@ -43,6 +44,9 @@ namespace ConsoleApp1.Business.Sistema
                     break;
                 case Opcoes.Series:
                     new SeriesMenu().ExibirMenu();
+                    break;
+                case Opcoes.Assistidos:
+                    new AssistidosMenu().ExibirMenu();
                     break;
                 case Opcoes.Relatorios:
                     Console.WriteLine("Menu de relatorios");

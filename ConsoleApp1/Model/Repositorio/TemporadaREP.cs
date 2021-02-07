@@ -21,8 +21,10 @@ namespace ConsoleApp1.Model.Repositorio
                 Utils.Pausar($"Já existe uma temporada com o nome {temporada.Nome}");
                 return false;
             }
-            int posicao = Repositorios.Series.IndexOf(serie);
-            Repositorios.Series[posicao].Temporadas.Add(temporada);
+            //int posicao = Repositorios.Series.IndexOf(serie);
+            //Repositorios.Series[posicao].Temporadas.Add(temporada);
+
+            serie.Temporadas.Add(temporada);
 
             Utils.Pausar($"Temporada cadastrada com sucesso!!!");
             return true;

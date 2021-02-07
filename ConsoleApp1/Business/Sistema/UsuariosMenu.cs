@@ -28,6 +28,11 @@ namespace ConsoleApp1.Business.Sistema
             if (ValidarSimples())
             {
                 var atual = (UsuarioModel)Rep.Buscar(Usuario);
+                if (atual == null)
+                { 
+                    Utils.Pausar("Usuario não localizado");
+                    return false;
+                }
                 if (atual.Email.Equals(Repositorios.UsuarioLogado.Email))
                 {
                     if (Utils.Perguntar("Ao deletar o usuario logado, será necessario retornar ao login, confirma Exclusão?"))

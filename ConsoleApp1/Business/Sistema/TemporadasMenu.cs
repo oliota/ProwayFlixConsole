@@ -86,7 +86,7 @@ namespace ConsoleApp1.Business.Sistema
                     if (ValidarSimples())
                     {
                         Temporada = (TemporadaModel)Rep.Buscar(temporada,Serie);
-                        if (Serie == null)
+                        if (Temporada == null)
                         {
                             Utils.Pausar("Temporada não localizada");
                             return;
