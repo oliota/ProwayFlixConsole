@@ -31,7 +31,7 @@ namespace ConsoleApp1.Business
 
                 Console.WriteLine("Informe a Senha");
                 Usuario.Senha = Console.ReadLine();
-                if (--Tentativas == 0)
+                if (--Tentativas == 0 && !ValidarEntrada())
                     return;
             } while (!ValidarEntrada() || Tentativas == 0);
             Entrar();
